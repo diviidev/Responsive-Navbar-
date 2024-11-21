@@ -1,0 +1,26 @@
+const openModal = (
+    user = { id: null, name: "", email: "", destination: "" } // will open a modal and send users data
+  ) => {
+    setModalData(user);
+    setShowModal(true);   // passed user as a default function if no parametere is passed default valeue of user will be taken and can also pass the value of user as a parametere to this function than that value of user will be taken
+  };
+
+if you want to pass more paramteres
+
+
+In the current code, only **one parameter** (`user`) is being passed to the `openModal` function. 
+
+However, you **can modify the function** to accept two parameters if you want to pass more data. Here's an example of how you could do that:
+
+### Example with Two Parameters:
+
+const openModal = (
+  user = { id: null, name: "", email: "", destination: "" }, 
+  otherData = {} // second parameter with a default value
+) => {
+  setModalData(user);  // Set the user data
+  setOtherData(otherData); // Set other data
+  setShowModal(true);   // Show the modal
+};
+
+You can pass **two parameters** if you modify the function to accept them. The default values for both parameters will be used if no arguments are passed when calling `openModal`.
